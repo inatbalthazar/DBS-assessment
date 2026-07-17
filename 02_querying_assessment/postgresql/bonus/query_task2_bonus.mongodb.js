@@ -17,8 +17,10 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking: need contact staff only cook -> get all staff -> filter 'Cook'
+                                            
 //
 use("chrome-burger-db");
 db.staff.find(
-    
+    {role: "Cook"},
+    {first_name: 1, last_name: 1, _id: 0}
 );
