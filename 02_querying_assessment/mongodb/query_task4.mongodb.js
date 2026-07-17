@@ -17,5 +17,13 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
+// Your thinking: all orders(grouping) -> sum revenue -> total_revenue
 //
+use("chrome-burger-db");
+db.orders.aggregate([
+    { 
+        $group: { _id: null, //<-- google to solve an error "_id"
+        "total_revenue": {$sum: "$total_price"}
+    }}
+]);
+// db.orders.find();
