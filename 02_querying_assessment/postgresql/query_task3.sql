@@ -22,7 +22,7 @@
 --                  -> find match data to staff
 --                  -> count order and sort it descend
 
-SELECT Staff.first_name, Staff.last_name, COUNT(*)
+SELECT Staff.first_name || ' ' || Staff.last_name, COUNT(*) --> ||(or) copied this concatenated from P'Nate JSD13
 FROM Orders
 JOIN Staff ON Orders.staff_id = Staff.staff_id
 GROUP BY Staff.first_name, Staff.last_name
