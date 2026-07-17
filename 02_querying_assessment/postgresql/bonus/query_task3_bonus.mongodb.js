@@ -18,5 +18,23 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
-//
+// Your thinking:   need the staff who sells most -> get all order 
+//                  -> find match data to staff
+//                  -> count order and sort it descend
+
+use("chrome-burger-db")
+db.orders.aggregate([
+    {
+        $group: {
+            _id: "$staff.staff_id", 
+            first_name: {$first: "$staff.first_name"},
+            last_name: {$first: "$staff.last_name"},
+            all_orders: {$sum: 1}
+        }
+    },
+    {
+        $sort: {
+            all_orders: -1
+        }
+    }
+]);
