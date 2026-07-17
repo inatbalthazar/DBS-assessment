@@ -16,5 +16,8 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: need contact staff only cook -> get all staff -> filter 'Cook'
 --
+SELECT first_name, last_name
+FROM Staff
+WHERE role = 'Cook'

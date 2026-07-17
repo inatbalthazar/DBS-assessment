@@ -18,5 +18,14 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
---
+-- Your thinking:   need the staff who sells most -> get all order 
+--                  -> find match data to staff
+--                  -> count order and sort it descend
+
+SELECT Staff.first_name, Staff.last_name, COUNT(*)
+FROM Orders
+JOIN Staff ON Orders.staff_id = Staff.staff_id
+GROUP BY Staff.first_name, Staff.last_name
+ORDER BY COUNT(*) DESC;
+
+
