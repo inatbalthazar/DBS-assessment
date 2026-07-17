@@ -18,5 +18,27 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
-//
+// Your thinking: lookup at ingredients from Freshest Farm Produce supply
+//                  ->find match ingredients to suppliers
+//                  ->filter Freshest Farm Produce
+use("chrome-burger-db");
+db.ingredients.aggregate([
+    {
+        $lookup: {
+            from: "suppliers",
+            localField: "supplier_id",
+            foreignField: "_id",
+            as: "supplier"
+        }
+    },
+    {
+        $match: {
+            "supplier.name": "Freshest Farm Produce"
+        }
+    },
+    {
+        $project: {
+            _id: 0, name: 1
+        }
+    }
+]);
