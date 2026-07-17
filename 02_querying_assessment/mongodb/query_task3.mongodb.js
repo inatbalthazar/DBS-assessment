@@ -16,9 +16,9 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking: buying material, need to know which stock gt 99 ea
+// Your thinking: buying material, need to know which stock gte 100 ea
 //
 use("chrome-burger-db")
 db.ingredients.find(
-    {stock_level: {$gt: 99.00}}, {unit: 0, supplier_id: 0}
+    {stock_level: {$gte: 100.00}}, {unit: 0, supplier_id: 0}
 );
