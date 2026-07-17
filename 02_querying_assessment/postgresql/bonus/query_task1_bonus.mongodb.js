@@ -16,5 +16,10 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
-//
+// Your thinking: want side dishes and price -> get all menu -> filter side
+//                -> in mongodb redesign method to obj-1{query},obj-2{result}
+use("chrome-burger-db");
+db.menu_items.find(
+    {category: "Side"},
+    {name: 1, price: 1}
+);

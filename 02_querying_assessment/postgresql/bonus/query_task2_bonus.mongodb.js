@@ -16,5 +16,9 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
+// Your thinking: need contact staff only cook -> get all staff -> filter 'Cook'
 //
+use("chrome-burger-db");
+db.staff.find(
+    
+);
