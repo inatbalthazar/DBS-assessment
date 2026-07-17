@@ -16,5 +16,9 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: all orders(grouping) -> sum revenue -> total_revenue
 --
+SELECT SUM (Orders.total_price) AS total_revenue
+FROM Orders
+
+
