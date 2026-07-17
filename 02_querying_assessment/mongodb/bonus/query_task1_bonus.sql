@@ -18,4 +18,7 @@
 --
 -- Your thinking: want promotion -> filter items  1. lt $10.00
 --
+SELECT name, description, price, category
+FROM MenuItems
+WHERE price <= 10.00
 

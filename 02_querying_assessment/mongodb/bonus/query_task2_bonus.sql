@@ -17,5 +17,10 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
---
+-- Your thinking: lookup order history -> filer "Jane"  1. when order create = date create
+--                                                      2. what it was worth = order sum
+--                                                      3. find match orders and staff
+SELECT order_date, total_price
+FROM Orders
+JOIN Staff ON Staff.staff_id = Orders.staff_id
+WHERE Staff.first_name = 'Jane' AND Staff.last_name = 'Doe';

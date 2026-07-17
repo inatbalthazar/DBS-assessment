@@ -16,7 +16,7 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking: buying material need to know which gt 99 
+// Your thinking: buying material, need to know which stock gt 99 ea
 //
 use("chrome-burger-db")
 db.ingredients.find(
