@@ -64,8 +64,11 @@
     </footer>
 
     <script>
-      const SUPABASE_URL = "https://chrome-burger-db-server.onrender.com/api/menu-items";
-      const MONGODB_URL  = "https://chrome-burger-db-server.onrender.com/api/mongodb-menu-items";
+      // แก้ไขส่วนนี้เป็น URL ของ Backend API Server ที่คุณ deploy บน Render.com
+      const BACKEND_URL = "https://dbs-assessment.onrender.com"; 
+      
+      const SUPABASE_URL = `${BACKEND_URL}/api/menu-items`;
+      const MONGODB_URL  = `${BACKEND_URL}/api/mongodb-menu-items`;
 
       function renderMenuItems(items, containerId) {
         const container = document.getElementById(containerId);
