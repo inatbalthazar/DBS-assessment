@@ -16,5 +16,6 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: want promotion -> filter items  1. lt $10.00
 --
+

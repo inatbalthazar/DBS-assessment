@@ -16,7 +16,7 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking: want -> promotion -> filter items  1. lt $10.00
+// Your thinking: want promotion -> filter items  1. lt $10.00
 //                                                           
 use("chrome-burger-db");
 db.menu_items.find({price: {$lt: 10.00}});

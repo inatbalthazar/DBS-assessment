@@ -16,5 +16,10 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
---
+-- Your thinking: lookup at ingredients from Freshest Farm Produce supply
+--                  ->find match ingredients to suppliers
+--                  ->filter Freshest Farm Produce
+SELECT Ingredients.name
+FROM Ingredients
+JOIN Suppliers ON Ingredients.supplier_id = Suppliers.supplier_id
+WHERE Suppliers.name = 'Freshest Farm Produce'
